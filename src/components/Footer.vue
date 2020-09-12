@@ -6,5 +6,8 @@
 export default {};
 </script>
 
-<style>
+<style lang="less" scoped>
+div {
+  color: aqua;
+}
 </style>

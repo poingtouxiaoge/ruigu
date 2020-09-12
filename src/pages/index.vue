@@ -70,9 +70,9 @@ export default {
 <style scoped>
 .el-carousel__item h3 {
   color: #475669;
-  font-size: 18px;
+  font-size: 1.125rem;
   opacity: 0.75;
-  line-height: 300px;
+  line-height: 18.75rem;
   margin: 0;
 }
 

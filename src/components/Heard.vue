@@ -4,18 +4,27 @@
       <img src="../assets/imgs/logo.jpg" alt />
     </div>
     <div class="title">
-      <p>首页</p>
+      <p @click="home()">首页</p>
       <p>新闻</p>
       <p>案例</p>
       <p>商品</p>
       <p>售后</p>
-      <p>联系</p>
+      <p @click="lianxi()">联系</p>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    lianxi() {
+      this.$router.push("/contact");
+    },
+    home() {
+      this.$router.push("/");
+    },
+  },
+};
 </script>
 
 <style  scoped>
