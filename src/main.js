@@ -6,6 +6,7 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'lib-flexible/flexible'
+import store from './store'//引入store
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 /* eslint-disable no-new */
@@ -13,6 +14,7 @@ new Vue({
   el: '#app',
   render: h => h(App),
   router,
+  storem,
   components: { App },
   template: '<App/>'
 })
