@@ -3,12 +3,7 @@
     <Heard></Heard>
     <div class="main">
       <el-row>
-        <el-col
-          :span="8"
-          v-for="(o, index) in 2"
-          :key="o"
-          :offset="index > 0 ? 2 : 0"
-        >
+        <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
           <el-card :body-style="{ padding: '0px' }">
             <img src="../assets/imgs/banner.jpg" class="image" />
             <div style="padding: 14px;">
@@ -39,13 +34,13 @@ import Footer from "../components/Footer";
 export default {
   components: {
     Heard,
-    Footer
+    Footer,
   },
   data() {
     return {
-      currentDate: new Date()
+      currentDate: new Date(),
     };
-  }
+  },
 };
 </script>
 

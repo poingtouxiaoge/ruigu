@@ -2,38 +2,23 @@
   <div class="login">
     <div class="box">
       <div class="title">
-        <div class="denglu" @click="tologin1">
-          登录
-        </div>
-        <div class="zhuce" @click="tologin2">
-          注册
-        </div>
+        <div class="denglu" @click="tologin1">登录</div>
+        <div class="zhuce" @click="tologin2">注册</div>
       </div>
       <!-- 登录模块 -->
       <div class="login_num" v-if="type == 1">
-        <el-form
-          :label-position="labelPosition"
-          label-width="100px"
-          :model="formLabelAlign"
-        >
+        <el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign">
           <el-form-item label="账号">
             <el-input v-model="formLabelAlign.name"></el-input>
           </el-form-item>
           <el-form-item label="密码">
-            <el-input
-              v-model="formLabelAlign.region"
-              type="password"
-            ></el-input>
+            <el-input v-model="formLabelAlign.region" type="password"></el-input>
           </el-form-item>
         </el-form>
       </div>
       <!-- 注册模块 -->
       <div class="login_num" v-if="type == 2">
-        <el-form
-          :label-position="labelPosition"
-          label-width="120px"
-          :model="formLabelAlign"
-        >
+        <el-form :label-position="labelPosition" label-width="120px" :model="formLabelAlign">
           <el-form-item label="手机号">
             <el-input v-model="formLabelAlign.name"></el-input>
           </el-form-item>
@@ -56,8 +41,8 @@ export default {
       labelPosition: "right",
       formLabelAlign: {
         name: "",
-        region: ""
-      }
+        region: "",
+      },
     };
   },
   methods: {
@@ -74,8 +59,8 @@ export default {
     toindex1() {
       alert("注册成功，赶快去登录吧！！");
       this.type = 1;
-    }
-  }
+    },
+  },
 };
 </script>
 
