@@ -45,9 +45,15 @@ export default {
       },
     };
   },
+
   methods: {
+    increment() {
+      this.$store.commit("increment");
+      console.log(this.$store.state.count);
+    },
     tologin1() {
       this.type = 1;
+      this.increment();
     },
     tologin2() {
       this.type = 2;

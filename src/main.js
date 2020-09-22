@@ -6,7 +6,11 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'lib-flexible/flexible'
+import Vuex from 'vuex'
 import store from './store'//引入store
+
+import 'es6-promise/auto'
+Vue.use(Vuex)
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 /* eslint-disable no-new */

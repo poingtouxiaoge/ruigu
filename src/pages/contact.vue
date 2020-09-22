@@ -17,13 +17,10 @@
         </el-col>
       </el-row>
     </div>
-    <div class="seatch">
-      <div class="input_text">
-        <span class="tubiao"></span>
-        <input type="text" class="text" placeholder="输入课程名字" />
-      </div>
-      <div class="lingdang"></div>
+    <div class="shaixuan">
+      <span class="zhankai" @click="dianji">点我展开</span>
     </div>
+    <div class="mengceng" v-if="type===2"></div>
     <Footer></Footer>
   </div>
 </template>
@@ -39,38 +36,34 @@ export default {
   data() {
     return {
       currentDate: new Date(),
+      type: 1,
     };
+  },
+  methods: {
+    dianji() {
+      this.type = 2;
+      console.log("点击了");
+    },
   },
 };
 </script>
 
 <style scoped>
-.seatch {
+.mengceng {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.zhankai {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  height: 50px;
-}
-.input_text {
-  display: flex;
-  width: 96%;
-  background: red;
-  border-radius: 10000px;
-  padding-right: 10px;
-}
-.tubiao {
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: #999;
-  margin-top: 15px;
-  margin-left: 10px;
-}
-.lingdang {
-  width: 20px;
-  height: 20px;
-  background: #666;
-  margin: 15px 0;
+  padding: 5px;
+  border: 1px solid #999;
+  background: skyblue;
+  color: #fff;
+  text-align: center;
 }
 .text {
   border: none;

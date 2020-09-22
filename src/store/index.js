@@ -1,12 +1,15 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-Vue.use(Vuex);
-const state = {
-    showFooter: true,
-    changableNun: 0
-}
-const store = new Vuex.Store({
-    state
-});
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-export default store;
+Vue.use(Vuex)
+
+const store = new Vuex.Store({
+    state: {
+        count: 0
+    },
+    mutations: {
+        increment(state) {
+            state.count++
+        }
+    }
+})
