@@ -23,7 +23,7 @@
         </el-menu-item>
       </el-menu>
       <el-carousel indicator-position="outside">
-        <el-carousel-item v-for="(item,index) in list" :key="index">
+        <el-carousel-item v-for="(item, index) in list" :key="index">
           <img :src="item.img" alt />
         </el-carousel-item>
       </el-carousel>
@@ -45,16 +45,13 @@ export default {
       activeIndex2: "1",
       list: [
         {
-          img: require("../assets/imgs/banner.jpg"),
+          img: require("../assets/imgs/slider-1.jpg"),
         },
         {
-          img: require("../assets/imgs/banner1.jpg"),
+          img: require("../assets/imgs/slider-2.jpg"),
         },
         {
-          img: require("../assets/imgs/banner2.jpg"),
-        },
-        {
-          img: require("../assets/imgs/banner3.jpg"),
+          img: require("../assets/imgs/slider-3.jpg"),
         },
       ],
     };
@@ -67,7 +64,7 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style  scoped>
 .el-carousel__item h3 {
   color: #475669;
   font-size: 1.125rem;
@@ -86,5 +83,8 @@ export default {
 img {
   width: 100%;
   height: 100%;
+}
+/deep/ .el-carousel__container {
+  height: 13rem;
 }
 </style>

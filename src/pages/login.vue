@@ -7,18 +7,29 @@
       </div>
       <!-- 登录模块 -->
       <div class="login_num" v-if="type == 1">
-        <el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign">
+        <el-form
+          :label-position="labelPosition"
+          label-width="6.25rem"
+          :model="formLabelAlign"
+        >
           <el-form-item label="账号">
             <el-input v-model="formLabelAlign.name"></el-input>
           </el-form-item>
           <el-form-item label="密码">
-            <el-input v-model="formLabelAlign.region" type="password"></el-input>
+            <el-input
+              v-model="formLabelAlign.region"
+              type="password"
+            ></el-input>
           </el-form-item>
         </el-form>
       </div>
       <!-- 注册模块 -->
       <div class="login_num" v-if="type == 2">
-        <el-form :label-position="labelPosition" label-width="120px" :model="formLabelAlign">
+        <el-form
+          :label-position="labelPosition"
+          label-width="7.5rem"
+          :model="formLabelAlign"
+        >
           <el-form-item label="手机号">
             <el-input v-model="formLabelAlign.name"></el-input>
           </el-form-item>
@@ -72,23 +83,23 @@ export default {
 
 <style scoped>
 .login {
-  width: 35.142857rem;
-  height: 500px;
+  width: 35.1429rem;
+  height: 31.25rem;
   padding: 10% 0;
   text-align: center;
   background: url("../assets/imgs/login_bg.jpg");
 }
 .box {
-  width: 600px;
+  width: 37.5rem;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
   background: #fff;
 }
 .title {
   display: flex;
   justify-content: space-between;
   font-size: xx-large;
-  padding: 20px 30px;
+  padding: 1.25rem 1.875rem;
   font-weight: 600;
   color: cornflowerblue;
 }
@@ -101,17 +112,17 @@ export default {
   color: aqua;
 }
 .login_num {
-  padding: 20px 30px;
+  padding: 1.25rem 1.875rem;
 }
 .btns {
-  padding: 5px 0;
-  width: 160px;
+  padding: 0.3125rem 0;
+  width: 10rem;
   text-align: center;
   background: skyblue;
   color: #fff;
-  font-size: 14px;
-  border-radius: 200px;
-  margin-left: 200px;
+  font-size: 0.875rem;
+  border-radius: 12.5rem;
+  margin-left: 12.5rem;
 }
 .btns:hover {
   background: pink;
